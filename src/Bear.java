@@ -1,3 +1,5 @@
+import java.util.Random;
+
 public class Bear extends Predator {
 
     public Bear(Island island, int x, int y,double weight) {
@@ -6,6 +8,18 @@ public class Bear extends Predator {
 
     @Override
     protected Animal createOffspring() {
-        return new Bear(island, x, y,weight);  // Создание потомка волка
+        return new Bear(island, x, y,weight);  // Создание потомка
+    }
+    public static void generateBear(Island island, int width, int height) {
+        Random random = new Random();
+        int nextInt = random.nextInt(2, 5);
+        for (int i = 0; i < nextInt; i++) {
+            int x = random.nextInt(1, width);
+            int y = random.nextInt(1, height);
+            Bear bear = new Bear(island, x, y, 500);
+            island.getLocation(x, y).addAnimals(bear);
+            Thread bearThread = new Thread(bear);
+            bearThread.start();
+        }
     }
 }

@@ -2,5 +2,7 @@
 
 
 public interface Eat {
-    void eat(Location location);
+    default void eat(Location location){
+
+    }
 }

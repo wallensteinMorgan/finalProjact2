@@ -26,143 +26,131 @@ class Location {
         return plants;
     }
 
-    // Метод для определения типа животного
-    private AnimalType getAnimalType(Animal animal) {
-        if (animal instanceof Wolf) {
-            return AnimalType.WOLF;
-        } else if (animal instanceof Herbivore) {
-            return AnimalType.HERBIVORE;
-        } else {
-            return AnimalType.OTHER;
-        }
-    }
     public void addAnimals(Animal animal) {
-        AnimalType type = getAnimalType(animal);
-        switch (type) {
-            case WOLF:
+        switch (animal) {
+            case Wolf wolf -> {
                 long wolfCount = animals.stream().filter(a -> a instanceof Wolf).count();
                 if (wolfCount >= 30) {
                     System.out.println("Максимальное количество волков на клетке достигнуто.");
                     return;  // Не добавляем волка, если их уже 30
                 }
                 animals.add(animal);
-                break;
-            case BEAR:
+            }
+            case Bear bear -> {
                 Long bearCount = animals.stream().filter(a -> a instanceof Bear).count();
                 if (bearCount >= 5) {
                     System.out.println("Максимальное количество волков на клетке достигнуто.");
-                    return;  // Не добавляем волка, если их уже 30
+                    return;  // Не добавляем волка, если их уже 5
                 }
                 animals.add(animal);
-                break;
-            case BOA:
+            }
+            case Boa boa -> {
                 Long boaCount = animals.stream().filter(a -> a instanceof Boa).count();
                 if (boaCount >= 30) {
                     System.out.println("Максимальное количество волков на клетке достигнуто.");
                     return;  // Не добавляем волка, если их уже 30
                 }
                 animals.add(animal);
-                break;
-            case BUFFALO:
+            }
+            case Buffalo buffalo -> {
                 Long buffaloCount = animals.stream().filter(a -> a instanceof Buffalo).count();
                 if (buffaloCount >= 10) {
                     System.out.println("Максимальное количество волков на клетке достигнуто.");
                     return;  // Не добавляем волка, если их уже 30
                 }
                 animals.add(animal);
-                break;
-            case CATERPILLAR:
+            }
+            case Caterpillar caterpillar -> {
                 Long caterpillarCount = animals.stream().filter(a -> a instanceof Caterpillar).count();
                 if (caterpillarCount >= 1000) {
                     System.out.println("Максимальное количество волков на клетке достигнуто.");
                     return;  // Не добавляем волка, если их уже 30
                 }
                 animals.add(animal);
-                break;
-            case DEER:
+            }
+            case Deer deer -> {
                 Long deerCount = animals.stream().filter(a -> a instanceof Deer).count();
                 if (deerCount >= 20) {
                     System.out.println("Максимальное количество волков на клетке достигнуто.");
                     return;  // Не добавляем волка, если их уже 30
                 }
                 animals.add(animal);
-                break;
-            case DUCK:
+            }
+            case Duck duck -> {
                 Long duckCount = animals.stream().filter(a -> a instanceof Duck).count();
                 if (duckCount >= 200) {
                     System.out.println("Максимальное количество волков на клетке достигнуто.");
                     return;  // Не добавляем волка, если их уже 30
                 }
                 animals.add(animal);
-                break;
-            case EAGLE:
+            }
+            case Eagle eagle -> {
                 Long eagleCount = animals.stream().filter(a -> a instanceof Eagle).count();
                 if (eagleCount >= 20) {
                     System.out.println("Максимальное количество волков на клетке достигнуто.");
                     return;  // Не добавляем волка, если их уже 30
                 }
                 animals.add(animal);
-                break;
-            case FOX:
+            }
+            case Fox fox -> {
                 Long foxCount = animals.stream().filter(a -> a instanceof Fox).count();
                 if (foxCount >= 30) {
                     System.out.println("Максимальное количество волков на клетке достигнуто.");
                     return;  // Не добавляем волка, если их уже 30
                 }
                 animals.add(animal);
-                break;
-            case GOAT:
+            }
+            case Goat goat -> {
                 Long goatCount = animals.stream().filter(a -> a instanceof Goat).count();
                 if (goatCount >= 140) {
                     System.out.println("Максимальное количество волков на клетке достигнуто.");
                     return;  // Не добавляем волка, если их уже 30
                 }
                 animals.add(animal);
-                break;
-            case HORSE:
+                }
+            case Horse horse -> {
                 Long horseCount = animals.stream().filter(a -> a instanceof Horse).count();
                 if (horseCount >= 20) {
                     System.out.println("Максимальное количество волков на клетке достигнуто.");
                     return;  // Не добавляем волка, если их уже 30
                 }
                 animals.add(animal);
-                break;
-            case RABBIT:
+            }
+            case Rabbit rabbit -> {
                 Long rabbitCount = animals.stream().filter(a -> a instanceof Rabbit).count();
                 if (rabbitCount >= 150) {
                     System.out.println("Максимальное количество волков на клетке достигнуто.");
                     return;  // Не добавляем волка, если их уже 30
                 }
                 animals.add(animal);
-                break;
-            case SHEEP:
+                }
+            case Sheep sheep -> {
                 Long sheepCount = animals.stream().filter(a -> a instanceof Sheep).count();
                 if (sheepCount >= 140) {
                     System.out.println("Максимальное количество волков на клетке достигнуто.");
                     return;  // Не добавляем волка, если их уже 30
                 }
                 animals.add(animal);
-                break;
-            case WILDBOAR:
+            }
+            case WildBoar wildBoar -> {
                 Long wildboarCount = animals.stream().filter(a -> a instanceof WildBoar).count();
                 if (wildboarCount >= 50) {
                     System.out.println("Максимальное количество волков на клетке достигнуто.");
                     return;  // Не добавляем волка, если их уже 30
                 }
                 animals.add(animal);
-                break;
-            case MOUSE:
+            }
+            case Mouse mouse -> {
                 Long mouseCount = animals.stream().filter(a -> a instanceof Mouse).count();
                 if (mouseCount >= 500) {
                     System.out.println("Максимальное количество волков на клетке достигнуто.");
                     return;  // Не добавляем волка, если их уже 30
                 }
                 animals.add(animal);
-                break;
-
-
-            default:
+            }
+            default -> {
                 throw new IllegalArgumentException("Неизвестный тип животного: " + animal.getClass().getSimpleName());
+            }
         }
 
     }
