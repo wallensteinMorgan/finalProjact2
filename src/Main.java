@@ -23,7 +23,6 @@ public class Main {
         Island island = new Island(height, width);
 
         // Добавляем животных на остров
-        Wolf wolf = new Wolf(island, 1, 1,50);  // Создаем волка на координатах (2, 2)
         Boa boa = new Boa(island, 2, 2,15);     // Создаем удава на координатах (3, 3)
         Fox fox = new Fox(island, 3,3,8);
         Bear bear = new Bear(island, 5,5,500);
@@ -41,7 +40,6 @@ public class Main {
 
 
         // Добавляем животных в соответствующие локации
-        island.getLocation(1, 1).addAnimals(wolf);  // Добавляем волка в локацию (2, 2)
         island.getLocation(2, 2).addAnimals(boa);   // Добавляем удава в локацию (3, 3)
         island.getLocation(3, 3).addAnimals(fox);
         island.getLocation(5, 5).addAnimals(bear);
@@ -58,7 +56,6 @@ public class Main {
         island.getLocation(5, 5).addAnimals(caterpillar);
 
         // Запускаем потоки для каждого животного
-        Thread wolfThread = new Thread(wolf);
         Thread boaThread = new Thread(boa);
         Thread foxThread = new Thread(fox);
         Thread bearThread = new Thread(bear);
@@ -74,7 +71,6 @@ public class Main {
         Thread caterpillarThread = new Thread(caterpillar);
 
 
-        wolfThread.start();  // Запуск потока с волком
         boaThread.start();   // Запуск потока с удавом
         foxThread.start();
         bearThread.start();
@@ -88,6 +84,9 @@ public class Main {
         wildBoarThread.start();
         duckThread.start();
         caterpillarThread.start();
+        Wolf.generateWolf(island, width, height);
+        WildBoar.generateWildBoar(island, width, height);
+        Sheep.generateSheep(island, width, height);
 
 
         // Выводим начальное состояние острова

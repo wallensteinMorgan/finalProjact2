@@ -55,4 +55,5 @@ public abstract class Animal implements Runnable, Eat, Movement, Reproduction {
     }
     // Абстрактный метод для создания потомства, который реализуется в подклассах
     protected abstract Animal createOffspring();
+
 }
