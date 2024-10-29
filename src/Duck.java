@@ -5,7 +5,7 @@ public class Duck  extends Herbivore {
 
     @Override
     protected Animal createOffspring() {
-        return new Duck(island, x, y,weight);  // Создание потомка волка
+        return new Duck(island, x, y,weight);  // Создание потомка
     }
 
 }

@@ -5,7 +5,7 @@ public class Mouse extends Herbivore {
 
     @Override
     protected Animal createOffspring() {
-        return new Mouse(island, x, y, weight);  // Создание потомка волка
+        return new Mouse(island, x, y, weight);  // Создание потомка
     }
 
 }

@@ -20,7 +20,6 @@ public class Main {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-
         Island island = new Island(height, width);
 
         // Добавляем животных на остров

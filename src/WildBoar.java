@@ -5,6 +5,6 @@ public class WildBoar extends Herbivore {
 
     @Override
     protected Animal createOffspring() {
-        return new WildBoar(island, x, y, weight);  // Создание потомка волка
+        return new WildBoar(island, x, y, weight);  // Создание потомка
     }
 }

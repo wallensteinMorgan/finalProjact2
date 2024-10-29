@@ -6,6 +6,6 @@ public class Wolf  extends Predator {
 
     @Override
     protected Animal createOffspring() {
-        return new Wolf(island, x, y, weight);  // Создание потомка волка
+        return new Wolf(island, x, y, weight);  // Создание потомка
     }
 }

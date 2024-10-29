@@ -6,6 +6,6 @@ public class Boa extends Predator {
 
     @Override
     protected Animal createOffspring() {
-        return new Boa(island, x, y,weight);  // Создание потомка волка
+        return new Boa(island, x, y,weight);  // Создание потомка
     }
 }

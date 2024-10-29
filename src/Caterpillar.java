@@ -5,6 +5,6 @@ public class Caterpillar extends Herbivore {
 
     @Override
     protected Animal createOffspring() {
-        return new Caterpillar(island, x, y,weight);  // Создание потомка волка
+        return new Caterpillar(island, x, y,weight);  // Создание потомка
     }
 }

@@ -5,7 +5,7 @@ public class Sheep extends Herbivore {
 
     @Override
     protected Animal createOffspring() {
-        return new Sheep(island, x, y,weight);  // Создание потомка волка
+        return new Sheep(island, x, y,weight);  // Создание потомка
     }
 
 }
