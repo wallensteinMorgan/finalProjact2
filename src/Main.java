@@ -85,6 +85,8 @@ public class Main {
         duckThread.start();
         caterpillarThread.start();
         Wolf.generateWolf(island, width, height);
+        WildBoar.generateWildBoar(island, width, height);
+        Sheep.generateSheep(island, width, height);
 
 
         // Выводим начальное состояние острова
