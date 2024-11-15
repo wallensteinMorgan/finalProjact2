@@ -1,14 +1,21 @@
+package animals.herbivore;
+
+import animals.Animal;
+import animals.Herbivore;
+import place.Island;
+
 import java.util.Random;
 
 public class Deer extends Herbivore {
-    public Deer(Island island, int x, int y,double weight) {
-        super("Олень", 50, island, x, y,300);  // Волк – плотоядное животное с максимальным голодом 8
+    public Deer(Island island, int x, int y, double weight) {
+        super("Олень", 50, island, x, y,300);  // Олень – травоядное животное с максимальным голодом 8
     }
 
     @Override
     protected Animal createOffspring() {
         return new Deer(island, x, y,weight);  // Создание потомка
     }
+
     public static void generateDeer(Island island, int width, int height) {
         Random random = new Random();
         int nextInt = random.nextInt(2, 20);

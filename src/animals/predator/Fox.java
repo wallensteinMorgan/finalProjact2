@@ -1,9 +1,15 @@
+package animals.predator;
+
+import animals.Animal;
+import animals.Predator;
+import place.Island;
+
 import java.util.Random;
 
-public class Fox extends Predator  {
+public class Fox extends Predator {
 
-    public Fox(Island island, int x, int y,double weight) {
-        super("Лиса", 2, island, x, y,8);  // Волк – плотоядное животное с максимальным голодом 2
+    public Fox(Island island, int x, int y, double weight) {
+        super("Лиса", 2, island, x, y,8);  // Лиса – плотоядное животное с максимальным голодом 2
     }
 
     @Override

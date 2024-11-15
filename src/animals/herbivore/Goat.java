@@ -1,14 +1,21 @@
+package animals.herbivore;
+
+import animals.Animal;
+import animals.Herbivore;
+import place.Island;
+
 import java.util.Random;
 
 public class Goat extends Herbivore {
-    public Goat(Island island, int x, int y,double weight) {
-        super("Коза", 10, island, x, y,	60);  // Волк – плотоядное животное с максимальным голодом 8
+    public Goat(Island island, int x, int y, double weight) {
+        super("Коза", 10, island, x, y,	60);  // Коза – травоядное животное с максимальным голодом 10
     }
 
     @Override
     protected Animal createOffspring() {
         return new Goat(island, x, y,weight);  // Создание потомка
     }
+
     public static void generateGoat(Island island, int width, int height) {
         Random random = new Random();
         int nextInt = random.nextInt(2, 140);

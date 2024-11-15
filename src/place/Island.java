@@ -1,5 +1,9 @@
-class Island {
-    private Location[][] locations;
+package place;
+
+import java.util.Random;
+
+public class Island {
+     Location[][] locations;
     private int width; // ширина
     private int height; // высота
     // Конструктор для создания острова с заданными размерами
@@ -7,10 +11,11 @@ class Island {
         this.width = width;
         this.height = height;
         locations = new Location[width][height]; // Инициализация массива локаций
+        Random random = new Random();
         // Цикл по каждой ячейке массива для создания локаций
         for (int i = 0; i < width; i++) {
             for (int j = 0; j < height; j++) {
-                locations[i][j] = new Location();// Каждая ячейка заполняется объектом Location
+                locations[i][j] = new Location();// Каждая ячейка заполняется объектом place.Location
             }
         }
     }

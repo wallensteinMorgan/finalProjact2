@@ -1,14 +1,21 @@
+package animals.herbivore;
+
+import animals.Animal;
+import animals.Herbivore;
+import place.Island;
+
 import java.util.Random;
 
 public class Buffalo extends Herbivore {
-    public Buffalo(Island island, int x, int y,double weight) {
-        super("Буйвол", 100, island, x, y,700);  // Волк – плотоядное животное с максимальным голодом 8
+    public Buffalo(Island island, int x, int y, double weight) {
+        super("Буйвол", 100, island, x, y,700);  // Буйвол – травоядное животное с максимальным голодом 100
     }
 
     @Override
     protected Animal createOffspring() {
         return new Buffalo(island, x, y,weight);  // Создание потомка
     }
+
     public static void generateBuffalo(Island island, int width, int height) {
         Random random = new Random();
         int nextInt = random.nextInt(2, 10);
