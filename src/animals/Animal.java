@@ -1,4 +1,9 @@
+package animals;
 
+import animals.interfaceOfCommand.Eat;
+import animals.interfaceOfCommand.Movement;
+import animals.interfaceOfCommand.Reproduction;
+import place.Island;
 
 public abstract class Animal implements Runnable, Eat, Movement, Reproduction {
     protected String name; // Имя животного

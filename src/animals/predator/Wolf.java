@@ -1,3 +1,9 @@
+package animals.predator;
+
+import animals.Animal;
+import animals.Predator;
+import place.Island;
+
 import java.util.Random;
 
 public class Wolf  extends Predator {
@@ -19,7 +25,6 @@ public class Wolf  extends Predator {
         }
 
     }
-
     @Override
     protected Animal createOffspring() {
         return new Wolf(island, x, y, weight);  // Создание потомка

@@ -1,8 +1,14 @@
+package animals.herbivore;
+
+import animals.Animal;
+import animals.Herbivore;
+import place.Island;
+
 import java.util.Random;
 
 public class WildBoar extends Herbivore {
     public WildBoar(Island island, int x, int y, double weight) {
-        super("Кабан", 50, island, x, y, 400);  //  – плотоядное животное с максимальным голодом 50
+        super("Кабан", 50, island, x, y, 400);  // Кабан – травоядное животное с максимальным голодом 50
     }
 
     @Override

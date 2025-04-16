@@ -1,8 +1,14 @@
+package animals.herbivore;
+
+import animals.Animal;
+import animals.Herbivore;
+import place.Island;
+
 import java.util.Random;
 
 public class Rabbit  extends Herbivore {
-    public Rabbit(Island island, int x, int y,double weight) {
-        super("Кролик", 0.45, island, x, y,2);  // Волк – плотоядное животное с максимальным голодом 8
+    public Rabbit(Island island, int x, int y, double weight) {
+        super("Кролик", 0.45, island, x, y,2);  // Кролик – травоядное животное с максимальным голодом 0,45
     }
 
     @Override

@@ -1,8 +1,14 @@
+package animals.herbivore;
+
+import animals.Animal;
+import animals.Herbivore;
+import place.Island;
+
 import java.util.Random;
 
 public class Mouse extends Herbivore {
     public Mouse(Island island, int x, int y, double weight) {
-        super("Мышь", 0.01, island, x, y, 0.05);  // Волк – плотоядное животное с максимальным голодом 8
+        super("Мышь", 0.01, island, x, y, 0.05);  // Мышь – травоядное животное с максимальным голодом 0,01
     }
 
     @Override

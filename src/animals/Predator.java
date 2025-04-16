@@ -1,3 +1,8 @@
+package animals;
+
+import place.Island;
+import place.Location;
+
 import java.util.List;
 import java.util.Random;
 

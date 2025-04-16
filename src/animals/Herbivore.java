@@ -1,5 +1,10 @@
+package animals;
+
+import place.Island;
+import place.Location;
+
 import java.util.Random;
-public class Herbivore extends  Animal{
+public class Herbivore extends Animal {
 
     public Herbivore(String name, double maxHunger, Island island, int x, int y, double weight) {
         super(name, maxHunger, island, x, y, weight);
